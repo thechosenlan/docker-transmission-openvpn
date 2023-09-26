@@ -35,6 +35,14 @@ jobs:
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            latest
+            ${{ github.sha }}
+            ${{ github.ref }}
+            ${{ github.ref_slug }}
+            ${{ github.repository }}
+            ${{ github.repository_owner }}
+            ${{ github.actor }}
 
       # Finally, build and push the images
       - name: Build and push Docker image
