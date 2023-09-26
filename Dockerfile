@@ -39,7 +39,8 @@ RUN set -ex; \
       libminiupnpc-dev \
       libnatpmp-dev \
       libpsl-dev \
-      libssl-dev
+      libssl-dev \
+      natpmpc
 
 FROM haugene/transmission-builder:4.0.4 as TransmissionBuilder
 
@@ -135,4 +136,6 @@ EXPOSE 9091
 # Privoxy
 EXPOSE 8118
 
-CMD ["dumb-init", "/etc/openvpn/start.sh"]
+COPY port-forwarding.sh /etc/port-forwarding.sh
+
+CMD ["dumb-init", "/etc/openvpn/start.sh", "/etc/port-forwarding.sh"]
