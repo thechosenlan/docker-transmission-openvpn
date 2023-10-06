@@ -137,5 +137,9 @@ EXPOSE 9091
 EXPOSE 8118
 
 COPY port-forwarding.sh /etc/port-forwarding.sh
+COPY entrypoint.sh /entrypoint.sh
 
-CMD ["dumb-init", "/etc/openvpn/start.sh", "/etc/port-forwarding.sh"]
+# Set execute permissions for the scripts
+RUN chmod +x /etc/port-forwarding.sh /entrypoint.sh
+
+CMD ["/entrypoint.sh"]
