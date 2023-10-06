@@ -120,6 +120,10 @@ fi
 
 echo "Transmission startup script complete."
 
+sleep 120
+
+echo "Starting port forwarding"
+
 # Initial port forwarding connection
 
 natpmpc -a 1 0 udp 60 -g 10.2.0.1
