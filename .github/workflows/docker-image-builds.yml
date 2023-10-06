@@ -9,7 +9,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: transmission-openvpn
+  IMAGE_NAME: thechosenlan/docker-transmission-openvpn
 
 jobs:
   build:
