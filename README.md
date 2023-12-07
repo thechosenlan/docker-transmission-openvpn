@@ -1,3 +1,7 @@
+# Port Forwarding Info ❗
+
+Check the file `/tmp/port-forwarding.log` and set your port in the GUI accordingly 
+
 # OpenVPN and Transmission with WebUI
 
 [![Docker Build](https://img.shields.io/github/actions/workflow/status/haugene/docker-transmission-openvpn/docker-image-builds.yml
