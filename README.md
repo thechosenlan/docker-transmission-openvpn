@@ -1,6 +1,6 @@
 # Port Forwarding Info ❗
 
-Check the file `/tmp/port-forwarding.log` and set your port in the GUI accordingly 
+Check the file `/tmp/port-forwarding.log` and set your port in the GUI accordingly. Needs to be done on every restart, if port forwarding is needed.
 
 # OpenVPN and Transmission with WebUI
 
